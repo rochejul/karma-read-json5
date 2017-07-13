@@ -15,6 +15,7 @@
   },
   "keywords": [
     "karma-plugin",
+    "karma-adapter",
     "json",
     "json5"
   ],
