@@ -1,0 +1,34 @@
+{
+  "name": "karma-read-json5",
+  "version": "0.0.1",
+  "description": "Karma plugin to load JSON (and use if possible JSON5)",
+  "main": "index.js",
+  "scripts": {
+  },
+  "homepage": "https://github.com/rochejul/karma-read-json5",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rochejul/karma-read-json5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rochejul/karma-read-json5/issues"
+  },
+  "keywords": [
+    "karma-plugin",
+    "json",
+    "json5"
+  ],
+  "author": {
+    "name": "Julien Roche"
+  },
+  "contributors": [
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0",
+    "npm": ">=2.0.0"
+  },
+  "dependencies": {
+    "json5": "latest"
+  }
+}
