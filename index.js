@@ -1,31 +1,16 @@
-var readJSON = function (url) {
-  url = readJSON.base + url;
+var path = require('path');
 
-  var xhr = new XMLHttpRequest();
-  var json = null;
+function createPattern (pattern) {
+  return { 'pattern': pattern, 'included': true, 'served': true, 'watched': false}
+}
 
-  xhr.open('GET', url, false);
+function initReadJson(files) {
+  files.unshift(createPattern(require.resolve('json5')));
+  files.unshift(createPattern(path.resolve(path.join(__dirname, '/read-json.js'))));
+}
 
-  xhr.onload = function (e) {
-    if (xhr.status === 200) {
-      json = typeof JSON5 !== 'undefined' ? JSON5.parse(xhr.responseText) : JSON.parse(xhr.responseText);
-    }
+initReadJson.$inject = ['config.files']
 
-    else {
-      console.error('readJSON', url, xhr.statusText);
-    }
-  };
-
-  xhr.onerror = function (e) {
-    console.error('readJSON', url, xhr.statusText);
-  };
-
-  xhr.send(null);
-  return json;
-};
-
-readJSON.base = '/base/';
-
-if (typeof exports !== 'undefined') {
-  exports.readJSON = readJSON;
+module.exports = {
+  'framework:readJson': ['factory', initReadJson]
 }
