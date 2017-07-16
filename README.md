@@ -1,4 +1,10 @@
 # karma-read-json5
+
+[![Build Status](https://travis-ci.org/rochejul/karma-read-json5.svg?branch=master)](https://travis-ci.org/rochejul/karma-read-json5)[![Dependency Status](https://david-dm.org/rochejul/karma-read-json5.svg)](https://david-dm.org/rochejul/karma-read-json5)
+[![devDependency Status](https://david-dm.org/rochejul/karma-read-json5/dev-status.svg)](https://david-dm.org/rochejul/karma-read-json5#info=devDependencies)
+
+
+
 Karma plugin to load JSON (and use if possible JSON5)
 
 ## To install it
