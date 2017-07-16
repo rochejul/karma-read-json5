@@ -1,17 +1,3 @@
-# karma-read-json5
-Karma plugin to load JSON (and use if possible JSON5)
-
-## To install it
-
-Simply do:
-
-````
-npm install --save-dev --save-exact karma-read-json5
-````
-
-## Karma.conf.js example
-
-````javascript
 // Karma configuration
 // Generated on Sun Jul 16 2017 13:22:56 GMT+0200 (Paris, Madrid (heure d’été))
 
@@ -86,57 +72,3 @@ module.exports = function (config) {
         concurrency: Infinity
     })
 };
-
-````
-
-## Test example
-
-````javascript
-'use strict';
-
-describe('Sample - ', function () {
-    it('simple', function () {
-        expect(true).toBe(true);
-    });
-
-    it('with simple json', function () {
-        expect(readJSON('test/mock/normal.json')).toEqual({
-            "array": [
-                1,
-                2,
-                3
-            ],
-            "boolean": true,
-            "null": null,
-            "number": 123,
-            "object": {
-                "a": "b",
-                "c": "d",
-                "e": "f"
-            },
-            "string": "Hello World"
-        });
-    });
-
-    it('with extended json', function () {
-        expect(readJSON('test/mock/extended.json')).toEqual({
-                "array": [
-                    1,
-                    2,
-                    3
-                ],
-                "boolean": true,
-                "null": null,
-                "Infinity": Infinity,
-                "number": 123,
-                "object": {
-                    "a": "b",
-                    "c": "d",
-                    "e": "f"
-                },
-                "string": "Hello World"
-            }
-        );
-    });
-});
-````
