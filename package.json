@@ -1,6 +1,6 @@
 {
   "name": "karma-read-json5",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Karma plugin to load JSON (and use if possible JSON5)",
   "main": "lib/index.js",
   "scripts": {
@@ -30,8 +30,7 @@
   "author": {
     "name": "Julien Roche"
   },
-  "contributors": [
-  ],
+  "contributors": [],
   "license": "MIT",
   "engines": {
     "node": ">=4.0.0",
