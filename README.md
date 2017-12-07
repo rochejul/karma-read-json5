@@ -23,7 +23,6 @@ npm install --save-dev --save-exact karma-read-json5
 
 ````javascript
 // Karma configuration
-// Generated on Sun Jul 16 2017 13:22:56 GMT+0200 (Paris, Madrid (heure d’été))
 
 module.exports = function (config) {
     config.set({
@@ -93,7 +92,13 @@ module.exports = function (config) {
 
         // Concurrency level
         // how many browser should be started simultaneous
-        concurrency: Infinity
+        concurrency: Infinity,
+        
+        client: {
+            readJSON: {
+                cached: true // Default false
+            }
+        }
     })
 };
 
